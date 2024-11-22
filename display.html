@@ -6,17 +6,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
-    <style>
-        .container{
-            height: 300px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <p class="text-white bg-dark p-3 user-select-all">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab inventore praesentium quam quo obcaecati maxime expedita consectetur, nisi ratione autem, perspiciatis aperiam necessitatibus odit in fuga? Quas ipsam explicabo saepe veniam autem perspiciatis, necessitatibus veritatis architecto ex iusto repellat eveniet laborum ipsa laboriosam quis magni itaque! Officiis, ut commodi?</p>
-        <a href="#" class="pe-auto link-opacity-50 link-opacity-100-hover link-underline-success link-offset-2">Click here</a>
-        <a href="#" class="pe-auto link-underline  link-opacity-50 link-underline-opacity-50 link-underline-opacity-100-hover link-offset-2">Click here</a>
+        <div class="accordion gap-2">
+            <div class="accordion-item">
+                <h2 class="accordion-button" data-bs-target="#item1" data-bs-toggle="collapse">Accordion Heading #1</h2>
+                <div id="item1" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quam blanditiis assumenda ipsum earum voluptas libero molestiae doloribus qui adipisci ab mollitia, laboriosam eius excepturi dolorem eum quaerat nobis voluptatem?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-button" data-bs-target="#item2" data-bs-toggle="collapse">Accordion Heading #2</h2>
+                <div id="item2" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quam blanditiis assumenda ipsum earum voluptas libero molestiae doloribus qui adipisci ab mollitia, laboriosam eius excepturi dolorem eum quaerat nobis voluptatem?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-button" data-bs-target="#item3" data-bs-toggle="collapse">Accordion Heading #3</h2>
+                <div id="item3" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quam blanditiis assumenda ipsum earum voluptas libero molestiae doloribus qui adipisci ab mollitia, laboriosam eius excepturi dolorem eum quaerat nobis voluptatem?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, provident?</div>
     </div>
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    appendAlert('Nice, you triggered this alert message!', 'success')
+  })
+}
+    </script>
 </body>
 </html>
