@@ -8,16 +8,37 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="row gap-1">
-            <div class="col bg-danger">hellow</div>
+    <!-- offcanvas  -->
+    <button class="btn btn-outline-danger" data-bs-toggle="offcanvas" data-bs-target="#ofcan">Click here</button>
+    <div class="offcanvas offcanvas-bottom" id="ofcan">
+        <div class="offcanvas-header">
+            <h5>Lorem ipsum dolor sit.</h5>
+            <button class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
-        <div class="row gap-1 my-1">
-            <div class="col bg-danger">hellow</div>
-            <div class="col-7 bg-danger">hellow</div>
-            <div class="col bg-danger">hellow</div>
+        <div class="offcanvas-body">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto ratione dolorem, assumenda tenetur libero corporis sint eaque iure ipsam numquam natus inventore mollitia earum magni est praesentium. Numquam qui consectetur fugiat officia et commodi quae rem! Voluptatem impedit cumque delectus!</p>
         </div>
-        
+        <div class="offcanvas-footer ">
+            <button class="btn btn-primary d-block" data-bs-dismiss="offcanvas">close</button>
+        </div>
     </div>
+    <!-- modal -->
+     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ofcan1">click</button>
+     <div class="modal" id="ofcan1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, eos? Aliquam recusandae nemo a, voluptatem sint minima blanditiis asperiores earum quae consectetur quidem laborum neque quas dolore impedit eos sunt quasi porro. Ex, quas. Inventore maxime repellat eos. Magni, dolorum!
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+                </div>
+            </div>
+        </div>
+     </div>
 </body>
 </html>
